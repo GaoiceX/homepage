@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <title>Gaoice</title>
+    <!-- MDUI -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        !window.jQuery && document.write(unescape('%3Clink href="/js/jquery-3.6.0.min.js" rel="stylesheet"%3E%3C/link%3E'))
+    </script>
+    <link rel="stylesheet" href="source/css/mdui.css" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdui/1.0.2/css/mdui.min.css"
+        integrity="sha512-Hh2syGXSuZabqBNcdvPiGo67ASyKhlKTZV9lLOmJp10qZ1v8/YPeuZBoOh0WmS/UPwWtRzQhNJfYyKDAhdGocQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mdui/1.0.2/js/mdui.min.js"
+        integrity="sha512-LBh0vC8hNru7991yk7vBb3tiBCU41shGOowGRnLqz63KYedvNQOyGOKHnl/pHSRYJ2P45bjzALArvDDHSSc2KA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript " src="source/js/mdui.min.js"></script>
+    <!-- aPlayer播放器 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css"
+        integrity="sha512-CIYsJUa3pr1eoXlZFroEI0mq0UIMUqNouNinjpCkSWo3Bx5NRlQ0OuC6DtEB/bDqUWnzXc1gs2X/g52l36N5iw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <link rel="stylesheet" href="source/css/APlayer.min.css" crossorigin="anonymous" /> -->
+    <div id="aplayer"></div>
+    <!-- aPlayer播放器JavaScript部分开始 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.js"
+        integrity="sha512-RWosNnDNw8FxHibJqdFRySIswOUgYhFxnmYO3fp+BgCU7gfo4z0oS7mYFBvaa8qu+axY39BmQOrhW3Tp70XbaQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript " src="source/js/APlayer.min.js"></script>
+    <!-- aPlayer播放器JavaScript部分结束 -->
+    <!-- ali iconfont -->
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <style>
+        body {
+            background-position: -99999px -99999px;
+            background-image: url(source/img/87538459_p0.png);
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: top;
+        }
+    </style>
+    <link rel="icon" href="source/img/avatar.jpg" type="image/x-icon">
+
+</head>
+
+<body class="mdui-color-theme-accent">
+    <div class="container-fluid start-screen h-100 main" style="backdrop-filter: blur(3px);overflow-x:hidden">
+        <div class="mdui-container">
+            <div id="home" style="display: block;">
+                <br>
+                <div class="mdui-row">
+                    <div class="mdui-col-xs-12 mdui-col-sm-12">
+                        <br>
+                        <!-- avatar here -->
+                        <!-- if screen is smaller than sm, the avatar is show as 96px. -->
+                        <!-- if screen is larger than sm, the avatar is show as 144 px. -->
+                        <!-- please write down  avatar link twice, and you avatar must larger than 144 px -->
+                        <div class="mdui-hidden-sm-up">
+                            <img class="mdui-center" src="source/img/avatar.jpg" width="96px">
+                        </div>
+                        <div class="mdui-hidden-xs-down">
+                            <img class="mdui-center" src="source/img/avatar.jpg" width="144px">
+                        </div>
+                        <!--  name and you tags here -->
+                        <div class="mdui-typo mdui-text-center">
+                            <!-- write down  name in here -->
+                            <div class="mdui-typo-headline mdui-text-color-white-text">Gaoice</div>
+                            <div class="mdui-card-content">
+                                <p>
+                                <div class="mdui-chip mdui-color-transparent">
+                                    <!-- write down  tags here -->
+                                    <span class="mdui-chip-title mdui-text-color-white-text">高中生，<span
+                                            id="age"></span>岁，折腾，整活，不怎么正常</span>
+                                </div>
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- this modules is area to show  websites and project. In each `<div>`, you can show  project in website -->
+                <a href="https://gaoice.ba7jcm.live/">
+                    <div class="mdui-row">
+                        <div class="mdui-col-xs-12 mdui-col-sm-4">
+                            <div class="mdui-cardmdui-shadow-15 mdui-hoverable">
+                                <div class="mdui-card-media">
+                                    <!-- here is  project image -->
+                                    <img src="source/img/91452849_p0.jpg" />
+                                    <div class="mdui-card-media-covered">
+                                        <div class="mdui-card-primary">
+                                            <!-- write down  project name in here -->
+                                            <div class="mdui-card-primary-title">我的博客</div>
+                                            <!-- write down  project slogan in here -->
+                                            <div class="mdui-card-primary-subtitle">我知我新，未知的世界那么惊艳</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mdui-card-actions">
+                                    <!-- write down  project's link in href, and write down some message in "> <"" -->
+                                    <a href="https://gaoice.ba7jcm.live/"
+                                        class="mdui-btn mdui-ripple mdui-text-color-white-text">去看看喵？</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mdui-col-xs-12 mdui-col-sm-4">
+                            <div class="mdui-cardmdui-shadow-15 mdui-hoverable">
+                                <div class="mdui-card-media">
+                                    <img src="source/img/87698076_p0.jpg" />
+                                    <div class="mdui-card-media-covered">
+                                        <div class="mdui-card-primary">
+                                            <div class="mdui-card-primary-title">Gaoice的盘姬(公开)</div>
+                                            <div class="mdui-card-primary-subtitle">基于Onemanger对接Onedrive搭建</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mdui-card-actions">
+                                    <a href="https://pan.gaoice.top/"
+                                        class="mdui-btn mdui-ripple mdui-text-color-white-text">要去玩~</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mdui-col-xs-12 mdui-col-sm-4">
+                            <div class="mdui-cardmdui-shadow-15 mdui-hoverable">
+                                <div class="mdui-card-media">
+                                    <img src="source/img/64343602_p0.jpg" />
+                                    <div class="mdui-card-media-covered">
+                                        <div class="mdui-card-primary">
+                                            <div class="mdui-card-primary-title">Gaoice的私有云~（暂时开放注册）</div>
+                                            <div class="mdui-card-primary-subtitle">使用Cloudreve对接OneDrive搭建</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mdui-card-actions">
+                                    <a href="https://cloudreve.gaoice.top:444/"><button
+                                            class="mdui-btn mdui-ripple mdui-text-color-white-text">我要体验下！</button></a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <br>
+            </div>
+            <div class="mdui-divider-light"></div>
+            <div class="mdui-divider-light"></div>
+            <div class="mdui-divider-light"></div>
+
+            <div id="links" style="display:block">
+                <br>
+                <div class="mdui-typo-display-1 mdui-text-color-white-text">友人们</div>
+                <ul class="mdui-list mdui-text-color-white-text">
+                    <a href="https://xiaolfeng.cn/">
+                        <li class="mdui-list-item mdui-ripple">
+                            <div class="mdui-list-item-avatar"><img src="avatar1.jpg" /></div>
+                            <div class="mdui-list-item-content">
+                                <div class="mdui-list-item-title">凌中的锋雨</div>
+                                <div class="mdui-list-item-text mdui-list-item-one-line">不为我有多厉害，只为在茫茫人海中有一片自己的天空~</div>
+                            </div>
+                        </li>
+                    </a>
+                    <a href="https://asaba.sakuragawa.moe/links/">
+                        <li class="mdui-divider-inset mdui-m-y-0"></li>
+                        <li class="mdui-list-item mdui-ripple">
+                            <div class="mdui-list-item-avatar"><img src="avatar2.jpg" ></div>
+                            <div class="mdui-list-item-content">
+                                <div class="mdui-list-item-title">樱川家::浅羽</div>
+                                <div class="mdui-list-item-text mdui-list-item-one-line">（很厉害的大姐姐哦</div>
+                            </div>
+                        </li>
+                    </a>
+                    <a href="https://bkryofu.xyz/">
+                        <li class="mdui-divider-inset mdui-m-y-0"></li>
+                        <li class="mdui-list-item mdui-ripple">
+                            <div class="mdui-list-item-avatar"><img src="avatar3.jpg" /></div>
+                            <div class="mdui-list-item-content">
+                                <div class="mdui-list-item-title">非科学の河童</div>
+                                <div class="mdui-list-item-text mdui-list-item-one-line">冻符 Minus-K</div>
+                            </div>
+                        </li>
+                    </a>
+                    <a href="https://gaoice.ba7jcm.live/link/"><button
+                            class="mdui-btn mdui-ripple">查看更多Gaoice的小伙伴</button></a>
+                </ul>
+                <div class="mdui-divider-light"></div>
+                <div class="mdui-divider-light"></div>
+                <div class="mdui-divider-light"></div>
+                <br>
+                <div class="mdui-typo-display-1 mdui-text-color-white-text">关于咱~</div>
+                <div class="mdui-col-xs-12 mdui-col-sm-4">
+                    <div class="mdui-panel-item-open" mdui-panel>
+                        <div class="mdui-panel-item mdui-color-transparent mdui-text-color-white-text mdui-hoverable">
+                            <div class="mdui-panel-item-header">关于咱~</div>
+                            <div class="mdui-panel-item-body">
+                                <p>名字：Gaoice</p>
+                                <p>一句话：我知我新，未知的世界那么惊艳</p>
+                                <p>位置：辽宁锦州</p>
+                                <p>Link:
+                                    <a href="https://gaoice.top/" class="mdui-text-color-white">https://gaoice.top/</a>
+                                </p>
+                                <p>
+                                <div class=" mdui-chip ">
+                                    <img class="mdui-chip-icon" src="source/img/avatar.jpg" />
+                                    <span class="mdui-chip-title mdui-text-color-black">我的头像（眼里有光的初音可爱吗）</span>
+                                </div>
+                                <div class="mdui-panel-item-actions ">
+                                    <a href="https://gaoice.ba7jcm.live/%e5%85%b3%e4%ba%8e/"
+                                        class="mdui-btn mdui-ripple ">关于我的更多......</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mdui-col-xs-12 mdui-col-sm-4">
+                    <div class="mdui-panel-item-open" mdui-panel>
+                        <div class="mdui-panel-item mdui-color-transparent mdui-text-color-white-text mdui-hoverable">
+                            <div class="mdui-panel-item-header ">想要和我成为好朋友喵？</div>
+                            <div class="mdui-panel-item-body ">
+                                <p>本站遵循先友后链原则，所以请到下面的按钮去找我!<br>或者加我或者叶子QQ聊几句喵！</p>
+                                <p>欢迎来找咱玩喵！</p>
+                                <p>需要添加友链请前往友链自助提交系统提交</p>
+                                <p>点击
+                                    <a href="https://gaoice.ba7jcm.live/friend" target="_blank" rel="noopener noreferrer"><input type="button" value="此按钮"></a> 前往提交友链</p>
+                                <!-- <p>友链自助提交系统正在开发中</p> -->
+                                <!-- 现已开发完成，边摸鱼边写，写了差不多5天，纯手打，原生PHP -->
+                                <div class="mdui-panel-item-actions ">
+                                    <a href="mailto://gaoice@gaoice.top" class="mdui-btn mdui-ripple ">邮箱申请</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mdui-col-xs-12 mdui-col-sm-4">
+                    <div class="mdui-panel-item-open" mdui-panel>
+                        <div class="mdui-panel-item mdui-color-transparent mdui-text-color-white-text mdui-hoverable">
+                            <div class="mdui-panel-item-header ">公告</div>
+                            <div class="mdui-panel-item-body ">
+                                <p>Gaoice现在已经在学校上课啦，大部分时间无法接触网络，如果很长时间未回复请检查垃圾邮箱或耐心等待喵！</p>
+                                <div class="mdui-panel-item-actions ">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mdui-text-center">
+            <br>
+            <a href="https://gaoice.ba7jcm.live/"><button
+                    class="mdui-fab mdui-ripple mdui-text-color-white-text mdui-hoverable"><i
+                        class="mdui-icon material-icons">class</i></button></a>
+            <a href="https://github.com/GaoiceX/"><button
+                    class="mdui-fab mdui-ripple mdui-text-color-white-text mdui-hoverable"><i
+                        class="mdui-icon material-icons">code</i></button></a>
+            <a href="https://gaoice.ba7jcm.live/link"><button
+                    class="mdui-fab mdui-ripple mdui-text-color-white-text mdui-hoverable"><i
+                        class="mdui-icon material-icons">supervisor_account</i></button></a>
+            <a href="https://pan.gaoice.top/"><button
+                    class="mdui-fab mdui-ripple mdui-text-color-white-text mdui-hoverable"><i
+                        class="mdui-icon material-icons">storage</i></button></a>
+            <a href="https://outlook.com/"><button
+                    class="mdui-fab mdui-ripple mdui-text-color-white-text mdui-hoverable"><i
+                        class="mdui-icon material-icons">local_post_office</i></button></a>
+            <a href="mailto://gaoice@gaoice.top/"><button
+                    class="mdui-fab mdui-ripple mdui-text-color-white-text mdui-hoverable"><i
+                        class="mdui-icon material-icons">chat</i></button></a>
+
+
+            <div class="mdui-container mdui-typo mdui-text-center mdui-text-color-white-text">
+                <br>
+                <div class="copyright ">2022 Gaoice Team</div>
+                <br>
+                <a href="https://icp.gov.moe/?keyword=20220109" target="_blank">萌ICP备20220109号</a>
+                <br>
+                <p1> </p1>
+            </div>
+
+            <!-- MDUI Javascript -->
+            <script src="source/js/birthday.js" type="text/javascript"></script>
+            <script>
+                // 调用我服务器上的meting对QQ音乐的歌单解析并生成json
+                var url = "https://meting.ba7jcm.live/meting-api/?server=tencent&type=playlist&id=8416946164"
+                // 使用jQuery解析json并交给原生aplayer进行播放
+                $.getJSON(url, function (data) {
+                    const ap = new APlayer({
+                        container: document.getElementById('aplayer'),
+                        // mini: false,
+                        lrcType: 3,
+                        fixed: true,
+                        audio: data
+                    })
+                });
+            </script>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+</body>
+
+</html> 
